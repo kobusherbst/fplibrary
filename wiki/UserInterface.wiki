@@ -7,6 +7,8 @@ This user interface allows the selection of a particular finger/heel for fingerp
 
 = Details =
 Prompt to place finger
-[http://code.google.com/p/fplibrary/source/browse/trunk/FPLibrary/Resources/fp_screen_cap.png]
+[http://code.google.com/p/fplibrary/source/trunk/FPLibrary/Resources/fp_screen_cap.png]
+----
 Scanned fingerprint with quality indication
-[http://code.google.com/p/fplibrary/source/browse/trunk/FPLibrary/Resources/fp_screen_cap2.png]
+[http://code.google.com/p/fplibrary/source/trunk/FPLibrary/Resources/fp_screen_cap2.png]
+----
