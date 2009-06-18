@@ -1,0 +1,14 @@
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Debug\FPLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Debug\FPLibrary.pdb
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Debug\GriauleFingerprintLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.pdb
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.csproj.GenerateResource.Cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.Hands.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.Properties.Resources.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.dlgCaptureFingerPrint.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Debug\Interop.MSDASC.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\Interop.MSDASC.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Debug\FPLibrary.csproj.ResolveComReference.cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Debug\FPLibrary.dll.config

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA4A1C3D-E941-4235-AFF1-D33417A457C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FPLibrary</RootNamespace>
+    <AssemblyName>FPLibrary</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="GriauleFingerprintLibrary, Version=1.0.2.0, Culture=neutral, PublicKeyToken=0cd8a94f71f97144, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Griaule\Fingerprint SDK 2009\bin\GriauleFingerprintLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessLayer\FPAccessDal.cs" />
+    <Compile Include="DataAccessLayer\FPDal.cs" />
+    <Compile Include="DataAccessLayer\FPSQLCEDal.cs" />
+    <Compile Include="DataAccessLayer\FPSQLDal.cs" />
+    <Compile Include="DataAccessLayer\GenericFactoryHelper.cs" />
+    <Compile Include="DataAccessLayer\IFPDal.cs" />
+    <Compile Include="dlgCaptureFingerPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgCaptureFingerPrint.Designer.cs">
+      <DependentUpon>dlgCaptureFingerPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FingerPrints.cs" />
+    <Compile Include="FPLibraryExceptions.cs" />
+    <Compile Include="Hands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hands.designer.cs">
+      <DependentUpon>Hands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dlgCaptureFingerPrint.resx">
+      <DependentUpon>dlgCaptureFingerPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hands.resx">
+      <DependentUpon>Hands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsel_foot_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_foot_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_foot_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_sel_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_sel_foot_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_sel_foot_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sel_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sel_foot_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sel_foot_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsel_finger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsel_foot_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FScanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_options_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RThumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LIndex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LLittle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LMiddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LThumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RIndex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RLittle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RMiddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RHeel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\LHeel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSDASC">
+      <Guid>{2206CEB0-19C1-11D1-89E0-00C04FD7A829}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
