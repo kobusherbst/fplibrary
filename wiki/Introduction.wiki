@@ -2,7 +2,7 @@
 
 = Introduction =
 
-FPLibrary is a WinForm .NET component and a wrapper class library to ease the use of the Griaule FingerPrint SDK in .NET applications.
+FPLibrary is a !WinForm .NET component and a wrapper class library to ease the use of the Griaule !FingerPrint SDK in .NET applications.
 
 
 = Details =
