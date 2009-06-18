@@ -1,0 +1,8 @@
+#summary The fingerprint capture user interface
+
+= Introduction =
+
+This user interface allows the selection of a particular finger/heel for fingerprint capture
+
+
+= Details =
