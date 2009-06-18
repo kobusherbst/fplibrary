@@ -1,0 +1,27 @@
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Release\FPLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Release\FPLibrary.pdb
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Release\GriauleFingerprintLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Release\Interop.MSDASC.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\ResolveAssemblyReference.cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\Interop.MSDASC.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.csproj.ResolveComReference.cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.dlgCaptureFingerPrint.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.Hands.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.Properties.Resources.resources
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.csproj.GenerateResource.Cache
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.dll
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\obj\Release\FPLibrary.pdb
+C:\Visual Studio\Projects\Biometrics\FPLibrary\FPLibrary\bin\Release\FPLibrary.dll.config
+D:\Dev\OSS\FPLibrary\FPLibrary\bin\Release\FPLibrary.dll.config
+D:\Dev\OSS\FPLibrary\FPLibrary\bin\Release\FPLibrary.dll
+D:\Dev\OSS\FPLibrary\FPLibrary\bin\Release\FPLibrary.pdb
+D:\Dev\OSS\FPLibrary\FPLibrary\bin\Release\Interop.MSDASC.dll
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\Interop.MSDASC.dll
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.csproj.ResolveComReference.cache
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.dlgCaptureFingerPrint.resources
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.Hands.resources
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.Properties.Resources.resources
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.csproj.GenerateResource.Cache
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.dll
+D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.pdb
