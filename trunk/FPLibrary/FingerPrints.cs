@@ -6,6 +6,9 @@ using GriauleFingerprintLibrary.DataTypes;
 using System.Windows.Forms;
 using GriauleFingerprintLibrary.Events;
 using FPLibrary.DataAccessLayer;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 
 namespace FPLibrary
 {
@@ -254,7 +257,8 @@ namespace FPLibrary
       try
       {
         Dictionary<Fingers, FingerprintTemplate> capturedFingers = Capture(sensor, false);
-        return Identify(anyMatch, capturedFingers);
+        if (capturedFingers == null || capturedFingers.Count == 0) return null;
+        else return Identify(anyMatch, capturedFingers);
       }
       catch (FingerprintException ex)
       {
@@ -326,35 +330,38 @@ namespace FPLibrary
       {
         object result = null;
         griauleLibrary.SetIdentifyParameters(IdentificationThreshold, IdentificationRotationTolerance);
-        Dictionary<Fingers, FingerprintTemplate> capturedFingers = Capture(sensor, false);
-        //Set up and prepare an identification context for each captured finger
-        Dictionary<Fingers, int> fingerContexts = new Dictionary<Fingers, int>(capturedFingers.Count);
-        Fingers matchFingers = 0; //Fingers to match
-        try
+        Dictionary<Fingers, FingerprintTemplate> capturedFingers = Capture(sensor, DataAccessLayer.ActiveIndividual != null);
+        if (capturedFingers != null && capturedFingers.Count > 0)
         {
-          foreach (var kvp in capturedFingers)
-          {
-            int context;
-            griauleLibrary.CreateContext(out context);
-            fingerContexts.Add(kvp.Key, context);
-            griauleLibrary.IdentifyPrepare(capturedFingers[kvp.Key], context);
-            matchFingers |= kvp.Key; //add finger to fingers to be matched
-          }
-          CompareFingerDelegate comparer = CompareTemplate;
-          result = DataAccessLayer.Identify(CompareTemplate, true, fingerContexts, matchFingers);
-          if (result == null)  //No one identified
+          //Set up and prepare an identification context for each captured finger
+          Dictionary<Fingers, int> fingerContexts = new Dictionary<Fingers, int>(capturedFingers.Count);
+          Fingers matchFingers = 0; //Fingers to match
+          try
           {
             foreach (var kvp in capturedFingers)
             {
-              DataAccessLayer.SaveTemplate(kvp.Key, kvp.Value);
+              int context;
+              griauleLibrary.CreateContext(out context);
+              fingerContexts.Add(kvp.Key, context);
+              griauleLibrary.IdentifyPrepare(capturedFingers[kvp.Key], context);
+              matchFingers |= kvp.Key; //add finger to fingers to be matched
+            }
+            CompareFingerDelegate comparer = CompareTemplate;
+            result = DataAccessLayer.Identify(CompareTemplate, true, fingerContexts, matchFingers);
+            if (result == null)  //No one identified
+            {
+              foreach (var kvp in capturedFingers)
+              {
+                DataAccessLayer.SaveTemplate(kvp.Key, kvp.Value);
+              }
             }
           }
-        }
-        finally
-        {
-          foreach (var kvp in fingerContexts)
+          finally
           {
-            griauleLibrary.DestroyContext(kvp.Value);
+            foreach (var kvp in fingerContexts)
+            {
+              griauleLibrary.DestroyContext(kvp.Value);
+            }
           }
         }
         return result;
@@ -370,13 +377,24 @@ namespace FPLibrary
         return null;
       }
     }
+    /// <summary>
+    /// Extract a fingerprint template from a raw fingerprint image
+    /// </summary>
+    /// <param name="image">The image to extract the template from</param>
+    /// <returns></returns>
+    public FingerprintTemplate ExtractTemplate(FingerprintRawImage image)
+    {
+      var template = new FingerprintTemplate();
+      griauleLibrary.ExtractEx(image, ref template, (GrTemplateFormat)DefaultTemplateFormat);
+      return template;
+    }
+    #endregion
+    #region Private Methods
     private bool CompareTemplate(int context, FingerprintTemplate template)
     {
       int verifyScore;
       return griauleLibrary.Identify(template, out verifyScore, context) == FingerprintConstants.GR_MATCH;
     }
-    #endregion
-    #region Private Methods
     private Fingers GetRegisteredFingers()
     {
       Fingers fingers = 0;

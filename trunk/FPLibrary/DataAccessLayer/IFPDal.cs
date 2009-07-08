@@ -44,6 +44,7 @@ namespace FPLibrary.DataAccessLayer
     /// </summary>
     /// <param name="finger">The finger to which the image belongs</param>
     /// <returns>A finger print bitmap</returns>
-    Bitmap GetFingerprintImage(Fingers finger);
+    FingerprintRawImage GetFingerprintImage(Fingers finger);
+    object ActiveIndividual{get;set;}
   }
 }

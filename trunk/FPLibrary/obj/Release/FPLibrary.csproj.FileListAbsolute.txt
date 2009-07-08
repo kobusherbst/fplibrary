@@ -25,3 +25,16 @@ D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.Properties.Resources.resour
 D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.csproj.GenerateResource.Cache
 D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.dll
 D:\Dev\OSS\FPLibrary\FPLibrary\obj\Release\FPLibrary.pdb
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\bin\Release\FPLibrary.dll.config
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\bin\Release\FPLibrary.dll
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\bin\Release\FPLibrary.pdb
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\bin\Release\Interop.MSDASC.dll
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\Interop.MSDASC.dll
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.csproj.ResolveComReference.cache
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.dlgCaptureFingerPrint.resources
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.Hands.resources
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.Properties.Resources.resources
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.csproj.GenerateResource.Cache
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.dll
+D:\Dev\OSS\fplibrary\trunk\FPLibrary\obj\Release\FPLibrary.pdb
