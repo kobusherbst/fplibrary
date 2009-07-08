@@ -157,7 +157,7 @@ namespace FPLibrary.DataAccessLayer
     }
     #endregion
     #region IFPDal Members
-    public System.Drawing.Bitmap GetFingerprintImage(Fingers finger)
+    public FingerprintRawImage GetFingerprintImage(Fingers finger)
     {
       return InternalGetFingerprintImage(finger);
     }
@@ -263,7 +263,7 @@ namespace FPLibrary.DataAccessLayer
     }
     #endregion
     #region Protected Methods
-    protected virtual System.Drawing.Bitmap InternalGetFingerprintImage(Fingers finger)
+    protected virtual FingerprintRawImage InternalGetFingerprintImage(Fingers finger)
     {
       throw new NotImplementedException();
     }
@@ -278,7 +278,7 @@ namespace FPLibrary.DataAccessLayer
     {
       throw new NotImplementedException();
     }
-    protected void ReadTemplate(IDataReader rdr, out Fingers finger, out FingerprintTemplate template)
+    protected virtual void ReadTemplate(IDataReader rdr, out Fingers finger, out FingerprintTemplate template)
     {
       byte[] buff = (byte[])rdr[TemplateFieldName];
       int quality = Convert.ToInt16(rdr[QualityFieldName]);
@@ -290,7 +290,7 @@ namespace FPLibrary.DataAccessLayer
     {
       return individualA == individualB;
     }
-    private Fingers MatchFingerCode(byte fingerCode)
+    protected Fingers MatchFingerCode(byte fingerCode)
     {
       foreach (var kvp in FingerValueTable)
       {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlServerCe;
 using System.Windows.Forms;
+using GriauleFingerprintLibrary.DataTypes;
 
 namespace FPLibrary.DataAccessLayer
 {
@@ -102,7 +103,7 @@ namespace FPLibrary.DataAccessLayer
     {
       return Convert.ToInt32(individualA)==Convert.ToInt32(individualB);
     }
-    protected override System.Drawing.Bitmap InternalGetFingerprintImage(Fingers finger)
+    protected override FingerprintRawImage InternalGetFingerprintImage(Fingers finger)
     {
       return base.InternalGetFingerprintImage(finger);
     }
